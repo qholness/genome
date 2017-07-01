@@ -9,10 +9,10 @@ Filter data with Chromosome and Mutations list.
 When you're ready, click "Reset" to reset the charts or submit a new data request.
 
 
-File Structure
-/genome
-|
-|____index.html
-|____static
-	|____css
-	|____js
+File Structure<br />
+/genome<br />
+|<br />
+|____index.html<br />
+|____static<br />
+	|____css<br />
+	|____js<br />
