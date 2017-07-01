@@ -14,5 +14,5 @@ File Structure<br />
 |<br />
 |____index.html<br />
 |____static<br />
-&emsp;|____css<br />
-&emsp;|____js<br />
+&emsp;&emsp;|____css<br />
+&emsp;&emsp;|____js<br />
