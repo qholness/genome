@@ -11,8 +11,8 @@ When you're ready, click "Reset" to reset the charts or submit a new data reques
 
 File Structure<br />
 /genome<br />
-|<br />
-|____index.html<br />
-|____static<br />
-&emsp;&emsp;|____css<br />
-&emsp;&emsp;|____js<br />
+&emsp;&emsp;|<br />
+&emsp;&emsp;|____index.html<br />
+&emsp;&emsp;|____static<br />
+&emsp;&emsp;&emsp;&emsp;|____css<br />
+&emsp;&emsp;&emsp;&emsp;|____js<br />
