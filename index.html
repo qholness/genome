@@ -1,0 +1,54 @@
+<html>
+<head>
+</head>
+<body>
+    <script src="static/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="static/js/clear_children.js"></script>
+    <script src="static/js/submitRequest.js"></script>
+    <script src="static/js/import_data.js"></script>
+    <script src="static/js/get_selection.js"></script>
+    <script src="static/js/change_colors.js"></script>
+    <script src="static/js/buildBar.js"></script>
+    <script src="static/js/buildChrom.js"></script>
+
+    <!--Request form-->
+    <div class="container">
+        <h1><strong>Examining Mutation Data</strong></h1>
+
+        <form action="#">
+            Submit request string: <input id="requestString" style="width: 80%" type="text" placeholder="Enter the URL you'd like to request" />
+            <br />
+            <input type="submit" name="" value="Submit Request" onclick="xhttp = submitRequest();"/>
+        </form>
+
+        <button onclick="data = importData();
+                        buildBarChart(data);
+                        buildChromosomeChart(data);">Generate Graphs</button>
+
+        <select onchange="changeColor(data);" id="mutationSelection">
+            <option value=0>Select Mutation</option>
+        </select>
+        <select onchange="changeColor(data);" id="chromosomeSelection">
+            <option value=0>Select Chromosome</option>
+        </select>
+        <button onclick="reset(); changeColor(data);">Reset</button>
+
+        <h3>Type Overview</h3><small>(Hover over the bars for more detail)</small>
+        <div id='barChart'></div>
+        
+        <br />
+
+        <h3>Chromosome Overview</h3>
+        <div id='chromosomeChart'></div>
+        <script type="text/javascript">
+            var reset = function() {
+                document.getElementById('mutationSelection').value = 0;
+                document.getElementById('chromosomeSelection').value = 0;
+            }
+        </script>
+    </div>
+</body>
+</html>
